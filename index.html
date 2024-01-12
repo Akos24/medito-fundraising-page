@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support our Medito community fundraising campaign for peace and well-being. Donate now!">
+    <meta name="keywords" content="Medito, fundraising, donate, community, meditation, peace">
+    <title>Medito Fundraising Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header>
+        <h1 class="fundraisingTitle"></h1>
+        <p class="fundraisingDescription"></p>
+    </header>
+    <div id="notificationBar">
+        Recent Donations: <span id="recentDonations"></span>
+    </div>
+    <main>
+        <section class="aboutCampaign">
+            <h1>Welcome to Our Fundraising Campaign!</h1>
+            <p>
+                Thank you for visiting our fundraising page. We are on a mission to create positive change
+                and need your support. Your contributions will help us achieve our goals and make a difference
+                in the Medito community.
+            </p>
+            <p>
+                Whether you're passionate about meditation, peace, or simply making the world a better place,
+                we invite you to join us in this exciting journey. Explore the various sections of this page to
+                learn more about our campaign, the goals we aim to achieve, and the impact your donations can have.
+            </p>
+        </section>
+        <section id="donationForm" class="donation-section">
+            <label for="amountInput">Enter donation amount:</label>
+            <input type="number" id="amountInput" placeholder="Enter amount" required>
+            <div class="currency-dropdown">
+                <select id="currencySelect">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <!-- Add more currency options as needed -->
+                </select>
+            </div>
+            <button id="donateButton" onclick="handleDonation()">Donate Now</button>
+        </section>
+        <section id="rewards" class="rewards-section">
+            <h2>Donate and Get Rewards</h2>
+            <div class="reward-tier">
+                <div class="reward-title">Bronze Supporter</div>
+                <div class="reward-description">Donate $10 or more and receive a personalized thank-you email.</div>
+            </div>
+            <div class="reward-tier">
+                <div class="reward-title">Silver Patron</div>
+                <div class="reward-description">Donate $50 or more and get your name listed on our campaign website.</div>
+            </div>
+            <div class="reward-tier">
+                <div class="reward-title">Gold Contributor</div>
+                <div class="reward-description">Donate $100 or more and receive a limited edition Medito community T-shirt.</div>
+            </div>
+        </section>
+        <section class="progressIndicator">
+            <p class="progress"></p>
+            <div class="progressBarContainer">
+                <div class="labels">
+                    <span class="label">$0</span>
+                    <span class="label" id="halfwayGoal"></span>
+                    <span class="label" id="goalLabel"></span>
+                </div>
+                <div class="progressBar">
+                    <div class="filler"></div>
+                </div>
+            </div>
+        </section>
+        <section class="qa-container">
+            <div class="question" onclick="toggleAnswer('qa1')">Question 1: What is our fundraising goal?</div>
+            <div class="answer" id="qa1"></div>
+            <div class="question" onclick="toggleAnswer('qa2')">Question 2: How can I contribute?</div>
+            <div class="answer" id="qa2">You can contribute by making a donation using the donation form on this page.</div>
+            <div class="question" onclick="toggleAnswer('emailForm')">Question 3: How can I stay updated?</div>
+            <div class="answer" id="emailForm">
+                <form>
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Medito Foundation. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

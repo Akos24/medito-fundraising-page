@@ -1,0 +1,265 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #edf7ed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header {
+    background-color: #6aa84f;
+    color: #fff;
+    text-align: center;
+    padding: 60px;
+    margin-bottom: 30px; /* Added margin */
+}
+
+#notificationBar {
+    background-color: #6aa84f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        text-align: left;
+    }
+    .fundraisingTitle {
+        font-size: 30px;
+    }
+}
+
+.fundraisingDescription {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .fundraisingDescription {
+        width: 80%;
+        text-align: left;
+    }
+}
+
+.aboutCampaign {
+    width: 70%
+}
+
+@media (max-width: 768px) {
+    .aboutCampaign {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+main {
+    padding: 30px;
+    height: auto;
+    max-height: calc(100vh - 100px);
+    margin-right: calc(-1 * (100vw - 100%));
+    text-align: left;
+}
+
+@media (max-width: 786px) {
+    main {
+        text-align: left;
+    }
+}
+
+.donation-section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+@media (max-width: 786px) {
+    .donation-section {
+        text-align: left;
+    }
+}
+
+#amountInput {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#donateButton {
+    padding: 12px;
+    background-color: #6aa84f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donateButton:hover {
+    background-color: #5a9140;
+}
+
+.rewards-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.reward-tier {
+    border: 1px solid #6aa84f;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    background-color: white;
+}
+
+.reward-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reward-description {
+    font-size: 16px;
+}
+
+.currency-dropdown {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#currencySelect {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.progressIndicator {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.progress {
+    font-size: 24px;
+    background-color: #6aa84f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.progressBarContainer {
+    width: 60%;
+}
+
+@media (max-width: 786px) {
+    .progressBarContainer {
+        width: 90%;
+    }
+}
+
+.progressBar {
+    height: 20px;
+    background-color: #edf7ed;
+    border-radius: 10px;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+.filler {
+    height: 100%;
+    width: 0;
+    background-color: #6aa84f;
+    transition: width 3s ease;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: #333;
+    margin-top: 20px; /* Added margin */
+}
+
+.label {
+    font-size: 14px;
+}
+
+.qa-container {
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+
+.question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #edf7ed;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #6aa84f;
+    border-radius: 5px;
+}
+
+#emailForm {
+    display: none;
+    margin-top: 20px;
+}
+
+#emailForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#emailForm label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#emailForm input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#emailForm button {
+    padding: 10px;
+    background-color: #6aa84f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#emailForm button:hover {
+    background-color: #5a9140;
+}
+
+footer {
+    background-color: #6aa84f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
